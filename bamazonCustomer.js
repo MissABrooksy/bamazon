@@ -65,3 +65,12 @@ function prompt(res) {
     })
     
 }
+
+// function updateQuantity(product, quantity) {
+//     connection.query(
+//       "UPDATE products SET stock_quantity = stock_quantity - ? WHERE item_id = ?",
+//      //code to update quantity in db
+        
+//       }
+//     );
+  
