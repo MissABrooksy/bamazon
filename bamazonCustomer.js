@@ -51,9 +51,17 @@ function prompt(res) {
         }
     ]).then(answers => {
         connection.query(`SELECT stock_quantity FROM products WHERE product_name = ${answers.product_name}`, (err, res) => {
-            console.log(res)
-            console.log('HERE')
+            //console.log(answers)
+            var amount = answers.units
+            console.log(amount)
+            // if(amount > product.stock_quantity){
+            //     console.log('Insufficient Quantity')
+            // }
+            // else(console.log('You purchased ' + answers.units + " units of " + answers.product_name))
+            console.log('You purchased ' + answers.units + " units of " + answers.product_name)
+            console.log('Total is $' + (answers.price * answers.units))
         })
-        console.log(answers)
+
     })
+    
 }
